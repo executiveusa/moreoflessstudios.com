@@ -351,6 +351,13 @@ def create_app() -> FastAPI:
         create_sample=create_sample,
     )
 
+    # Register More-of-Less job dispatch routes
+    try:
+        from acestep.api.routes.mol_jobs import router as mol_router
+        app.include_router(mol_router)
+    except ImportError:
+        pass  # mol_jobs dependencies not installed yet
+
     return app
 
 

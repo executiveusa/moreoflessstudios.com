@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "dashboard": "Panel",
+    "audio": "Estudio de Audio",
+    "video": "Video Musical",
+    "characters": "Laboratorio de Personajes",
+    "signOut": "Cerrar sesión"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido de vuelta a tu estudio.",
+    "stats": {
+      "projects": "Proyectos",
+      "recentJobs": "Trabajos Recientes",
+      "totalSpend": "Gasto Total"
+    },
+    "quickStart": "Inicio Rápido",
+    "recentProjects": "Proyectos Recientes",
+    "actions": {
+      "masterAudio": "Masterizar Audio",
+      "masterAudioDesc": "Sube y mejora tu pista",
+      "musicVideo": "Video Musical",
+      "musicVideoDesc": "Genera visuales para tu música",
+      "newCharacter": "Nuevo Personaje",
+      "newCharacterDesc": "Crea un personaje de IA consistente"
+    }
+  },
+  "audio": {
+    "title": "Estudio de Audio",
+    "subtitle": "Sube una pista para masterizarla, separar stems o analizar su estructura.",
+    "dropLabel": "Suelta un archivo de audio aquí",
+    "uploaded": "Subido",
+    "actions": {
+      "master": "Masterizar Audio",
+      "masterDesc": "Normalizar volumen, aplicar EQ y compresión",
+      "stems": "Separar Stems",
+      "stemsDesc": "Aislar voz, batería, bajo e instrumentos",
+      "analyze": "Analizar Pista",
+      "analyzeDesc": "Detectar BPM, tonalidad, estado de ánimo y estructura"
+    },
+    "recentJobs": "Trabajos Recientes"
+  },
+  "video": {
+    "title": "Video Musical",
+    "subtitle": "Sube tu pista y genera un video musical cinematográfico con IA.",
+    "step1": "1. Subir Audio",
+    "step2": "2. Elegir Estilo Visual",
+    "generate": "Generar Video Musical",
+    "generating": "En cola…",
+    "recentJobs": "Trabajos Recientes"
+  },
+  "characters": {
+    "title": "Laboratorio de Personajes",
+    "subtitle": "Crea personajes que se mantengan consistentes en todos tus videos.",
+    "newCharacter": "Nuevo Personaje",
+    "createCharacter": "Crear Personaje",
+    "cancel": "Cancelar",
+    "saving": "Guardando…",
+    "empty": "Sin personajes aún. Crea uno para mantener personas de IA consistentes en tus videos.",
+    "fields": {
+      "name": "Nombre",
+      "namePlaceholder": "ej. Luna",
+      "appearance": "Apariencia",
+      "appearancePlaceholder": "Alta, cabello oscuro, ojos azules, joyería plateada, estética cyberpunk",
+      "rules": "Reglas de Continuidad",
+      "rulesPlaceholder": "Una regla por línea:\nSiempre usa joyería plateada\nAmbientes con luces de neón"
+    }
+  },
+  "jobs": {
+    "status": {
+      "pending": "Pendiente",
+      "processing": "Procesando",
+      "completed": "Completado",
+      "failed": "Fallido",
+      "cancelled": "Cancelado"
+    },
+    "types": {
+      "audio_master": "Masterización de Audio",
+      "stem_sep": "Separación de Stems",
+      "audio_analyze": "Análisis de Audio",
+      "music_gen": "Generación de Música",
+      "video_gen": "Generación de Video",
+      "image_gen": "Generación de Imagen",
+      "clip_extract": "Extracción de Clip",
+      "caption_gen": "Escritura de Subtítulos"
+    },
+    "download": "Descargar",
+    "cancel": "Cancelar",
+    "noJobs": "Sin trabajos aún."
+  },
+  "chat": {
+    "title": "Agente de Estudio",
+    "subtitle": "Impulsado por Claude",
+    "placeholder": "Pregunta a tu agente…",
+    "welcome": "¡Hola! Soy tu agente More-of-Less. Dime qué quieres crear: \"masterizar mi audio\", \"hacer un video musical\" o \"separar mis stems\".",
+    "thinking": "Pensando…"
+  },
+  "auth": {
+    "signIn": "Iniciar Sesión",
+    "signingIn": "Iniciando sesión…",
+    "signUp": "Crear Cuenta",
+    "creatingAccount": "Creando cuenta…",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "noAccount": "¿Sin cuenta?",
+    "createOne": "Créala",
+    "alreadyHave": "¿Ya tienes una cuenta?",
+    "checkEmail": "Revisa tu correo",
+    "confirmSent": "Enviamos un enlace de confirmación a"
+  }
+}
