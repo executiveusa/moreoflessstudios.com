@@ -113,7 +113,7 @@ export default function VideoPage() {
             </button>
 
             <div className="bg-card border border-border rounded-lg p-4 text-sm text-muted-foreground space-y-1">
-              <p>• Analyzes your track's BPM, key, and energy</p>
+              <p>• Analyzes your track&apos;s BPM, key, and energy</p>
               <p>• Plans 3–5 scenes matching the song structure</p>
               <p>• Generates each scene via fal.ai LTX-Video</p>
               <p>• Stitches and syncs to audio via FFmpeg</p>
