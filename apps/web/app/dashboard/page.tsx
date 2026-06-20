@@ -9,14 +9,14 @@ export default async function DashboardPage() {
 
   const [{ data: projects }, { data: recentJobs }] = await Promise.all([
     supabase
-      .from('projects')
+      .from('mol_projects')
       .select('id, name, total_cost_usd, created_at, status')
       .eq('user_id', user!.id)
       .eq('status', 'active')
       .order('created_at', { ascending: false })
       .limit(6),
     supabase
-      .from('jobs')
+      .from('mol_jobs')
       .select('id, type, status, cost_usd, created_at')
       .eq('user_id', user!.id)
       .order('created_at', { ascending: false })

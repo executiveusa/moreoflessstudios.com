@@ -22,7 +22,7 @@ export default function AudioStudioPage() {
 
     // Create asset record
     const { data } = await supabase
-      .from('assets')
+      .from('mol_assets')
       .insert({
         project_id: projectId,
         user_id: user!.id,

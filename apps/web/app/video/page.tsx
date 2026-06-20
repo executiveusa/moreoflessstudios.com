@@ -23,7 +23,7 @@ export default function VideoPage() {
     const { data: { user } } = await supabase.auth.getUser();
 
     const { data } = await supabase
-      .from('assets')
+      .from('mol_assets')
       .insert({
         project_id: projectId,
         user_id: user!.id,

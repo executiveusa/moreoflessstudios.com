@@ -49,7 +49,7 @@ class CostTracker:
             return True, ""
 
         profile = (
-            self._supabase.table("profiles")
+            self._supabase.table("mol_profiles")
             .select("budget_usd, monthly_spend_usd")
             .eq("id", user_id)
             .single()
@@ -71,10 +71,10 @@ class CostTracker:
 
         if self._supabase and user_id:
             # Update job cost
-            self._supabase.table("jobs").update({"cost_usd": actual_cost}).eq("id", job_id).execute()
+            self._supabase.table("mol_jobs").update({"cost_usd": actual_cost}).eq("id", job_id).execute()
             # Increment monthly spend on profile
             profile = (
-                self._supabase.table("profiles")
+                self._supabase.table("mol_profiles")
                 .select("monthly_spend_usd")
                 .eq("id", user_id)
                 .single()
@@ -82,9 +82,9 @@ class CostTracker:
             )
             if profile.data:
                 new_spend = profile.data["monthly_spend_usd"] + actual_cost
-                self._supabase.table("profiles").update({"monthly_spend_usd": new_spend}).eq("id", user_id).execute()
+                self._supabase.table("mol_profiles").update({"monthly_spend_usd": new_spend}).eq("id", user_id).execute()
             # Log event
-            self._supabase.table("events").insert({
+            self._supabase.table("mol_events").insert({
                 "user_id": user_id,
                 "job_id": job_id,
                 "event_type": "job_cost",

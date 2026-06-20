@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   if (authErr || !user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const projectId = request.nextUrl.searchParams.get('projectId');
-  let query = supabase.from('jobs').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
+  let query = supabase.from('mol_jobs').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
   if (projectId) query = query.eq('project_id', projectId);
 
   const { data, error } = await query.limit(50);
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
   // Check budget
   const { data: profile } = await supabase
-    .from('profiles')
+    .from('mol_profiles')
     .select('budget_usd, monthly_spend_usd')
     .eq('id', user.id)
     .single();
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
   }
 
   const { data: job, error } = await supabase
-    .from('jobs')
+    .from('mol_jobs')
     .insert({
       user_id: user.id,
       project_id: projectId,

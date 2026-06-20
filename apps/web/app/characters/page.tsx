@@ -17,7 +17,7 @@ export default function CharactersPage() {
   useEffect(() => {
     const supabase = createClient();
     supabase
-      .from('characters')
+      .from('mol_characters')
       .select('*')
       .order('created_at', { ascending: false })
       .then(({ data }) => setCharacters(data ?? []));
@@ -35,7 +35,7 @@ export default function CharactersPage() {
       .filter(Boolean);
 
     const { data } = await supabase
-      .from('characters')
+      .from('mol_characters')
       .insert({
         user_id: user!.id,
         name,

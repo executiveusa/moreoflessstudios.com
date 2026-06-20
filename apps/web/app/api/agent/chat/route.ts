@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
 
   // Get user language preference
   const { data: profile } = await supabase
-    .from('profiles')
+    .from('mol_profiles')
     .select('language, monthly_spend_usd, budget_usd')
     .eq('id', user.id)
     .single();
@@ -114,7 +114,7 @@ async function executeAgentTool(
 ) {
   if (toolName === 'create_job') {
     const { data: job } = await supabase
-      .from('jobs')
+      .from('mol_jobs')
       .insert({
         user_id: userId,
         project_id: (input.projectId as string) ?? 'default',
@@ -145,7 +145,7 @@ async function executeAgentTool(
 
   if (toolName === 'list_recent_jobs') {
     const { data: jobs } = await supabase
-      .from('jobs')
+      .from('mol_jobs')
       .select('id, type, status, progress, cost_usd')
       .eq('user_id', userId)
       .order('created_at', { ascending: false })
@@ -156,7 +156,7 @@ async function executeAgentTool(
 
   if (toolName === 'list_characters') {
     const { data: chars } = await supabase
-      .from('characters')
+      .from('mol_characters')
       .select('id, name, appearance')
       .eq('user_id', userId);
 

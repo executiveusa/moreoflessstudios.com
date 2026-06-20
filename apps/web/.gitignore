@@ -1,0 +1,15 @@
+# Next.js
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Env
+.env*.local
+
+# Vercel
+.vercel/
+
+# Allow lib/ (root .gitignore excludes it for Python venv, but we need it here)
+!lib/

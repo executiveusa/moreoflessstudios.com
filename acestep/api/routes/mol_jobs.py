@@ -190,7 +190,7 @@ async def _process_video_gen(payload: DispatchRequest):
 async def _update_job(job_id: str, updates: dict[str, Any]):
     async with httpx.AsyncClient() as client:
         await client.patch(
-            f"{SUPABASE_URL}/rest/v1/jobs?id=eq.{job_id}",
+            f"{SUPABASE_URL}/rest/v1/mol_jobs?id=eq.{job_id}",
             headers=_supabase_headers(),
             json=updates,
         )
@@ -199,7 +199,7 @@ async def _update_job(job_id: str, updates: dict[str, Any]):
 async def _get_asset(asset_id: str) -> dict | None:
     async with httpx.AsyncClient() as client:
         res = await client.get(
-            f"{SUPABASE_URL}/rest/v1/assets?id=eq.{asset_id}&select=*",
+            f"{SUPABASE_URL}/rest/v1/mol_assets?id=eq.{asset_id}&select=*",
             headers=_supabase_headers(),
         )
         data = res.json()
@@ -209,7 +209,7 @@ async def _get_asset(asset_id: str) -> dict | None:
 async def _create_asset(parent: dict, r2_key: str, filename: str, asset_type: str = "audio") -> str:
     async with httpx.AsyncClient() as client:
         res = await client.post(
-            f"{SUPABASE_URL}/rest/v1/assets",
+            f"{SUPABASE_URL}/rest/v1/mol_assets",
             headers={**_supabase_headers(), "Prefer": "return=representation"},
             json={
                 "project_id": parent["project_id"],

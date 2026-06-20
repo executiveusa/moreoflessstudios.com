@@ -17,7 +17,7 @@ export function JobList({ projectId }: Props) {
 
     // Initial load
     supabase
-      .from('jobs')
+      .from('mol_jobs')
       .select('*')
       .eq('project_id', projectId)
       .order('created_at', { ascending: false })
@@ -25,10 +25,10 @@ export function JobList({ projectId }: Props) {
 
     // Realtime subscription for live updates
     const channel = supabase
-      .channel(`jobs:${projectId}`)
+      .channel(`mol_jobs:${projectId}`)
       .on(
         'postgres_changes',
-        { event: '*', schema: 'public', table: 'jobs', filter: `project_id=eq.${projectId}` },
+        { event: '*', schema: 'public', table: 'mol_jobs', filter: `project_id=eq.${projectId}` },
         payload => {
           if (payload.eventType === 'INSERT') {
             setJobs(prev => [payload.new as Job, ...prev]);
