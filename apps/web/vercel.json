@@ -1,0 +1,18 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "app/api/agent/chat/route.ts": {
+      "maxDuration": 30
+    },
+    "app/api/jobs/route.ts": {
+      "maxDuration": 10
+    },
+    "app/api/assets/upload/route.ts": {
+      "maxDuration": 10
+    }
+  }
+}

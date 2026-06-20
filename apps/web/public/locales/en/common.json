@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "audio": "Audio Studio",
+    "video": "Music Video",
+    "characters": "Character Lab",
+    "signOut": "Sign out"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back to your studio.",
+    "stats": {
+      "projects": "Projects",
+      "recentJobs": "Recent Jobs",
+      "totalSpend": "Total Spend"
+    },
+    "quickStart": "Quick Start",
+    "recentProjects": "Recent Projects",
+    "actions": {
+      "masterAudio": "Master Audio",
+      "masterAudioDesc": "Upload & polish your track",
+      "musicVideo": "Music Video",
+      "musicVideoDesc": "Generate visuals for your music",
+      "newCharacter": "New Character",
+      "newCharacterDesc": "Create a consistent AI character"
+    }
+  },
+  "audio": {
+    "title": "Audio Studio",
+    "subtitle": "Upload a track to master it, separate stems, or analyze musical structure.",
+    "dropLabel": "Drop an audio file to get started",
+    "uploaded": "Uploaded",
+    "actions": {
+      "master": "Master Audio",
+      "masterDesc": "Normalize loudness, apply EQ & compression",
+      "stems": "Separate Stems",
+      "stemsDesc": "Isolate vocals, drums, bass, and instruments",
+      "analyze": "Analyze Track",
+      "analyzeDesc": "Detect BPM, key, mood, and structure"
+    },
+    "recentJobs": "Recent Jobs"
+  },
+  "video": {
+    "title": "Music Video",
+    "subtitle": "Upload your track and generate a cinematic music video with AI.",
+    "step1": "1. Upload Audio",
+    "step2": "2. Choose Visual Style",
+    "generate": "Generate Music Video",
+    "generating": "Queuing…",
+    "recentJobs": "Recent Jobs"
+  },
+  "characters": {
+    "title": "Character Lab",
+    "subtitle": "Create characters that stay consistent across all your videos.",
+    "newCharacter": "New Character",
+    "createCharacter": "Create Character",
+    "cancel": "Cancel",
+    "saving": "Saving…",
+    "empty": "No characters yet. Create one to maintain consistent AI personas across your videos.",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Luna",
+      "appearance": "Appearance",
+      "appearancePlaceholder": "Tall, dark hair, blue eyes, silver jewelry, cyberpunk aesthetic",
+      "rules": "Continuity Rules",
+      "rulesPlaceholder": "One rule per line:\nAlways wear silver jewelry\nNeon-lit environments only"
+    }
+  },
+  "jobs": {
+    "status": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "completed": "Completed",
+      "failed": "Failed",
+      "cancelled": "Cancelled"
+    },
+    "types": {
+      "audio_master": "Audio Mastering",
+      "stem_sep": "Stem Separation",
+      "audio_analyze": "Audio Analysis",
+      "music_gen": "Music Generation",
+      "video_gen": "Video Generation",
+      "image_gen": "Image Generation",
+      "clip_extract": "Clip Extraction",
+      "caption_gen": "Caption Writing"
+    },
+    "download": "Download",
+    "cancel": "Cancel",
+    "noJobs": "No jobs yet."
+  },
+  "chat": {
+    "title": "Studio Agent",
+    "subtitle": "Powered by Claude",
+    "placeholder": "Ask your agent…",
+    "welcome": "Hi! I'm your More-of-Less agent. Tell me what you'd like to create — \"master my audio\", \"make a music video\", or \"separate my stems\".",
+    "thinking": "Thinking…"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signingIn": "Signing in…",
+    "signUp": "Create Account",
+    "creatingAccount": "Creating account…",
+    "email": "Email",
+    "password": "Password",
+    "noAccount": "No account?",
+    "createOne": "Create one",
+    "alreadyHave": "Already have an account?",
+    "checkEmail": "Check your email",
+    "confirmSent": "We sent a confirmation link to"
+  }
+}

@@ -1,0 +1,19 @@
+# Next.js
+.next/
+out/
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+
+# Env
+.env*.local
+
+# Vercel
+.vercel/
+
+# Un-ignore files excluded by root .gitignore for Python conventions
+!lib/
+!package-lock.json
