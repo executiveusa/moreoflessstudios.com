@@ -119,7 +119,7 @@ async function executeAgentTool(
         user_id: userId,
         project_id: (input.projectId as string) ?? 'default',
         type: input.type as string,
-        params: (input.params as Record<string, unknown>) ?? {},
+        params: (input.params as import('@/lib/supabase/types').Json) ?? {},
         status: 'pending',
         progress: 0,
       })
