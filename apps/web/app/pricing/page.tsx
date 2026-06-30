@@ -149,7 +149,7 @@ export default function PricingPage() {
             </details>
             <details className="border border-border rounded-lg p-4">
               <summary className="font-semibold cursor-pointer">What happens if I exceed my credits?</summary>
-              <p className="mt-2 text-muted-foreground">Jobs won't process if you're out of credits. Add a payment method to continue, or upgrade your plan.</p>
+              <p className="mt-2 text-muted-foreground">Jobs won&apos;t process if you&apos;re out of credits. Add a payment method to continue, or upgrade your plan.</p>
             </details>
             <details className="border border-border rounded-lg p-4">
               <summary className="font-semibold cursor-pointer">Do you offer refunds?</summary>
